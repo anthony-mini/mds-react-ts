@@ -1,5 +1,6 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Header, Button, Select, Grid } from '../../components';
+import { fetchUsersData } from '../../services';
 
 const filterGender = [
   { value: '0', label: 'All Gender' },
@@ -18,6 +19,13 @@ const Home: React.FC = () => {
     document.title = `React - TS - Webpack - Template`;
   }, []);
 
+  const [data, setData] = useState([]);
+
+  const handleButtonClick = async () => {
+    const response = await fetchUsersData();
+    setData(response);
+  };
+
   return (
     <React.Fragment>
       <Header />
@@ -25,8 +33,8 @@ const Home: React.FC = () => {
         <section className="flex">
           <div className="action-list">
             <div className="button">
-              <Button text="Fetch Users" />
-              <Button text="Clear Filter" />
+              <Button text="Fetch Users" onClick={()}/>
+              <Button text="Clear Filter" onClick={() => setData([])} />
             </div>
             <div className="select">
               <Select options={filterGender} />
@@ -35,7 +43,7 @@ const Home: React.FC = () => {
           </div>
         </section>
         <section className="my-6">
-          <Grid />
+          <Grid data={data}/>
         </section>
       </main>
     </React.Fragment>
