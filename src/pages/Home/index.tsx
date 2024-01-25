@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
-import { Header } from '../../components';
+import { Header, Button } from '../../components';
 
-const Home = () => {
+const Home: React.FC = () => {
   useEffect(() => {
     document.title = `React - TS - Webpack - Template`;
   }, []);
@@ -9,7 +9,13 @@ const Home = () => {
   return (
     <React.Fragment>
       <Header />
-      <main className="p-3"></main>
+      <main>
+        <section>
+          <div className="actionList">
+            <Button text="Fetch Users" />
+          </div>
+        </section>
+      </main>
     </React.Fragment>
   );
 };

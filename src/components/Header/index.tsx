@@ -5,9 +5,9 @@ import { Link } from 'react-router-dom';
 const Header = () => {
   return (
     <>
-      <header className="header" id="header">
+      <header className="bg-gray-800 text-white py-4 px-6" id="header">
         <Link to="/">
-          <h1>Welcome to React APP Courses !</h1>
+          <h1 className="text-3xl font-bold">Welcome to React APP Courses !</h1>
         </Link>
       </header>
     </>
