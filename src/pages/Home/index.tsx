@@ -1,7 +1,23 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { Header, Button } from '../../components';
 
-const MonComponent = () => {
-  return <div>Bonjour, ceci est mon composant !</div>;
+const Home: React.FC = () => {
+  useEffect(() => {
+    document.title = `React - TS - Webpack - Template`;
+  }, []);
+
+  return (
+    <React.Fragment>
+      <Header />
+      <main>
+        <section>
+          <div className="actionList">
+            <Button text="Fetch Users" />
+          </div>
+        </section>
+      </main>
+    </React.Fragment>
+  );
 };
 
-export default MonComponent;
+export default Home;

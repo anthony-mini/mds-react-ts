@@ -1,6 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import { Home } from '../pages';
+import { Error, Home } from '../pages';
 import '../App.css';
 
 function App() {
@@ -8,6 +8,7 @@ function App() {
     <Router>
       <Routes>
         <Route path="/" element={(<Home />) as React.ReactNode} />
+        <Route path="*" element={(<Error />) as React.ReactNode} />
       </Routes>
     </Router>
   );

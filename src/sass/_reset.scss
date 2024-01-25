@@ -7,6 +7,12 @@
   -moz-box-sizing: border-box;
 }
 
+#root {
+  margin: 0;
+  max-width: 100%;
+  padding: 0;
+}
+
 html {
   -webkit-text-size-adjust: none; /*─ Debug font size on iphone when landscape orientation ─*/
   -webkit-font-smoothing: subpixel-antialiased; /*─ Debug safari font weight when fixed element on the page ─*/
