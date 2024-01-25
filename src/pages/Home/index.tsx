@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react';
-import { Header, Button, Select } from '../../components';
-import SVGMemes from '../../assets/doge-hand-drawn.svg';
+import { Header, Button, Select, Grid } from '../../components';
 
 const filterGender = [
   { value: '0', label: 'All Gender' },
@@ -34,13 +33,9 @@ const Home: React.FC = () => {
               <Select options={filterAge} />
             </div>
           </div>
-          <aside>
-            <img
-              className="animate-blink mt-6 mb-0 ml-8 mr-0 w-20"
-              src={SVGMemes}
-              alt="dog-memes"
-            />
-          </aside>
+        </section>
+        <section className="my-6">
+          <Grid />
         </section>
       </main>
     </React.Fragment>
